@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.user
+  client.user.setGame('*help')
 });
 
 const prefix = "*"
@@ -20,15 +20,20 @@ client.on("message", (message) => {
   if (command === 'picme') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
-  } else {
-    if (command === 'help') {
-      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
-    } else {
-      if (command === "setusername") {
-        client.bot.setNickname(args.join(" "));
-      }
-    }
   }
+  
+  if (command === 'help') {
+    message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
+  }
+  
+  if (command === 'setusername') {
+    client.bot.setNickname(args.join(" "));
+  }
+
+  if (command === '') {
+    
+  }
+}
 });
 
 client.login(process.env.TOKEN);

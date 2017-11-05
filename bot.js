@@ -25,7 +25,7 @@ client.on("message", (message) => {
       message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
     } else {
       if (command === "setusername") {
-        client.user.setNickname(args.join(" "));
+        client.bot.setNickname(args.join(" "));
       }
     }
   }

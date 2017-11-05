@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-const prefix = "#"
+const prefix = "a.";
 
 client.on("ready", () => {
   console.log("I am ready!");
@@ -17,8 +17,8 @@ client.on("message", (message) => {
 
   let args = message.content.split(" ").slice[1];
   
-  if (command === "Hello") {
-    message.channel.sendMessage("Hello!");
+  if (command === "say") {
+    message.channel.sendMessage(args.join(" "));
   }
 });
 

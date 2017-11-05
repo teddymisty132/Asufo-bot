@@ -3,6 +3,7 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
+  client.user
 });
 
 const prefix = "*"
@@ -24,7 +25,7 @@ client.on("message", (message) => {
       message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
     } else {
       if (command === "setusername") {
-        client.user.setNickname(args[0]);
+        client.user.setNickname(args.join(" "));
       }
     }
   }

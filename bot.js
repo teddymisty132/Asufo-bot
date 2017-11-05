@@ -36,7 +36,7 @@ client.on("message", (message) => {
   }
 
   if (command === 'verison') {
-      message.reply('I am running on'+ version)
+      message.author.send('I am running on'+ version)
   }
 });
 

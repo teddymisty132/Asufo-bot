@@ -7,7 +7,7 @@ client.on("ready", () => {
 });
 
 const prefix = "*"
-const cmds = "*help, *picme"
+const cmds = "*help, *picme, *uptime, *setusername"
 
 client.on("message", (message) => {
   if (message.author.bot) return;
@@ -31,7 +31,7 @@ client.on("message", (message) => {
   }
 
   if (command === 'uptime') {
-      message.reply('I have been up for ' + client.uptime)
+      message.reply('I have been up for ' + client.uptime + ' miliseconds')
   }
 });
 

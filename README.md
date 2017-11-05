@@ -1,6 +1,6 @@
 # Asufo-bot
-```ruby
-  def foo
-    puts 'bar'
-  end
+```lua
+  if game then
+    chiclen = game.C.Value
+  end)
 ```

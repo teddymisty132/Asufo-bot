@@ -29,11 +29,6 @@ client.on("message", (message) => {
   if (command === 'setusername') {
     client.bot.setNickname(args.join(" "));
   }
-
-  if (command === '') {
-    
-  }
-}
 });
 
 client.login(process.env.TOKEN);

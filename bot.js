@@ -8,6 +8,7 @@ client.on("ready", () => {
 
 const prefix = "*"
 const cmds = "*help, *picme, *uptime, *setusername"
+const version = '0.1.3'
 
 client.on("message", (message) => {
   if (message.author.bot) return;
@@ -32,6 +33,10 @@ client.on("message", (message) => {
 
   if (command === 'uptime') {
       message.reply('I have been up for ' + client.uptime + ' miliseconds')
+  }
+
+  if (command === 'verison') {
+      message.author.reply('I am currently running on version '+ version)
   }
 });
 

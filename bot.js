@@ -44,8 +44,8 @@ client.on("message", (message) => {
       return message.reply('Please mention a user to roast.')
     } else {
       let roastuser = message.guild.member(message.mentions.users.first());
-      postMessage(roastuser.avatarURL);
-      postMessage('<'+ roastuser.id + '> your so ugly, the ugly duckling ran away from you');
+      channel.send(roastuser.avatarURL);
+      channel.send('${roastuser} your so ugly, the ugly duckling ran away from you');
     }
   }
 

@@ -29,6 +29,10 @@ client.on("message", (message) => {
   if (command === 'setusername') {
     client.bot.setNickname(args.join(" "));
   }
+
+  if (command === 'uptime') {
+      message.reply('I have been up for ' + client.uptime)
+  }
 });
 
 client.login(process.env.TOKEN);

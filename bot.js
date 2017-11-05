@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+;const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -22,7 +22,7 @@ client.on("message", (message) => {
     message.reply(message.author.avatarURL);
   } else {
     if (command === 'help') {
-      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
+      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds);
     }
   }
 });

@@ -24,7 +24,7 @@ client.on("message", (message) => {
   }
   
   if (command === 'help') {
-    message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
+    message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds);
   }
   
   if (command === 'setusername') {
@@ -32,12 +32,23 @@ client.on("message", (message) => {
   }
 
   if (command === 'uptime') {
-      message.reply('I have been up for ' + client.uptime + ' miliseconds')
+      message.reply('I have been up for ' + client.uptime + ' miliseconds');
   }
 
   if (command === 'verison') {
-      message.author.send('I am running on'+ version)
+      message.reply('I am running on'+ version);
   }
+
+  if (command === 'roast') {
+    if (message.mentions.users.size === 0) {
+      return message.reply('Please mention a user to roast.')
+    } else {
+      let roastuser = message.guild.member(message.mentions.users.first());
+      postMessage(roastuser.avatarURL);
+      postMessage('<'+ roastuser.id + '> your so ugly, the ugly duckling ran away from you');
+    }
+  }
+
 });
 
 client.login(process.env.TOKEN);

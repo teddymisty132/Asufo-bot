@@ -24,7 +24,7 @@ client.on("message", (message) => {
       message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
     } else {
       if (command === "setusername") {
-        client.user.setUsername(args[1]);
+        client.user.setUsername('discordjs');
       }
     }
   }

@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.user.setGame("*help | V: 0.0.3");
 });
 
 const prefix = "*"
@@ -22,7 +21,11 @@ client.on("message", (message) => {
     message.reply(message.author.avatarURL);
   } else {
     if (command === 'help') {
-      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds);
+      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
+    } else {
+      if (command === "setusername") {
+        client.user.setUsername(args[0]);
+      }
     }
   }
 });

@@ -3,9 +3,11 @@ const client = new Discord.Client();
 
 client.on("ready", () => {
   console.log("I am ready!");
+  client.user.setGame("*help | V: 0.0.3");
 });
 
 const prefix = "*"
+const cmds = "*help, *picme"
 
 client.on("message", (message) => {
   if (message.author.bot) return;
@@ -18,6 +20,10 @@ client.on("message", (message) => {
   if (command === 'picme') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
+  } else {
+    if (command === 'help') {
+      message.reply("Info\nPrefix:"+ prefix +"\nCommands:"+ cmds)
+    }
   }
 });
 

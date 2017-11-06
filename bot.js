@@ -1,4 +1,4 @@
-messconst Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on("ready", () => {
@@ -45,7 +45,7 @@ client.on("message", (message) => {
     } else {
       let roastuser = message.guild.member(message.mentions.users.first());
       message.channel.send(roastuser.avatarURL);
-      message.channel.send('<' + roastuser.id +'> your so ugly, the ugly duckling ran away from you');
+      message.channel.send('<'+ roastuser.id +'> your so ugly, the ugly duckling ran away from you');
     }
   }
 

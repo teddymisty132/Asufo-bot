@@ -12,7 +12,7 @@ const prefix = "*"
 const cmds = "*help, *picme, *uptime, *setusername"
 
 // Disable
-offline = true
+offline = false
 
 client.on("message", (message) => {
   if (message.author.bot) return;

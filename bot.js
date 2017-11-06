@@ -10,6 +10,9 @@ const prefix = "*"
 const cmds = "*help, *picme, *uptime, *setusername"
 const version = '0.1.3'
 
+// Disable
+offline = true
+
 client.on("message", (message) => {
   if (message.author.bot) return;
   if (!message.content.startsWith(prefix)) return;
@@ -18,6 +21,11 @@ client.on("message", (message) => {
  command = command.slice(prefix.length);
  
  let args = message.content.split(" ").slice(1);
+
+ if (offline) {
+   return message.channel.send('The bot is currently disabled from its developer, Sorry.')
+ }
+
   if (command === 'picme') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);

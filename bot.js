@@ -23,7 +23,7 @@ client.on("message", (message) => {
  let args = message.content.split(" ").slice(1);
 
  if (offline) {
-   return message.channel.send('The bot is currently disabled from its developer, Sorry.')
+   return message.channel.send('**The bot is currently disabled from its developer, Sorry.**')
  }
 
   if (command === 'picme') {

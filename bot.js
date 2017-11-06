@@ -1,14 +1,15 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+const version = '0.1.3'
+
 client.on("ready", () => {
   console.log("I am ready!");
-  client.user.setGame('*help')
+  client.user.setGame('*help | Version: '+ version)
 });
 
 const prefix = "*"
 const cmds = "*help, *picme, *uptime, *setusername"
-const version = '0.1.3'
 
 // Disable
 offline = true

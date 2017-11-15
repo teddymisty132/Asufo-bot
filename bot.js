@@ -1,16 +1,20 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-
-var dbapi = require("discordbots.org-api");
-var db = new dbapi("Mzc2NTQxNDU2ODA4MTQ4OTkz.DN_5GA.3Bfb1t8dOGWpB8qZ2Q-Z3w9hu9c")
+const snekfetch = require('snekfetch');
 
 const version = '0.1.3'
 
 
 client.on("ready", () => {
   console.log("I am ready!");
-  db.postStats(376541456808148993, client.guilds.size).then((botData) => { console.log(botData) })
+  const snekfetch = require('snekfetch')
+  
+  snekfetch.post(`https://discordbots.org/api/bots/${client.user.id}/stats`)
+    .set('Authorization', proccess.env.BOTTOKEN2)
+    .send({ server_count: client.guilds.size })
+    .then(() => console.log('Updated discordbots.org stats.'))
+    .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
 });
 
 const prefix = "*"
@@ -79,4 +83,4 @@ client.on("message", (message) => {
 
 });
 
-client.login(process.env.TOKEN);
+client.login(procces.env.TOKEN);

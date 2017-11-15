@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 
-var dbapi = require("./discordbots.js/index.js");
+var dbapi = require("discordbots.org-api");
 var db = new dbapi("Mzc2NTQxNDU2ODA4MTQ4OTkz.DN_5GA.3Bfb1t8dOGWpB8qZ2Q-Z3w9hu9c")
 
 const version = '0.1.3'
@@ -10,7 +10,6 @@ const version = '0.1.3'
 
 client.on("ready", () => {
   console.log("I am ready!");
-  client.user.setGame('*help | Version: '+ version)
   db.postStats(376541456808148993, client.guilds.size).then((botData) => { console.log(botData) })
 });
 
@@ -76,11 +75,6 @@ client.on("message", (message) => {
       message.reply('You need to join a voice channel first!');
     }
   }
-
-
-});
-
-client.login(process.env.TOKEN);
 
 
 });

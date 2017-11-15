@@ -26,8 +26,6 @@
   "homepage": "https://github.com/teddymisty132/Asufo-botu#readme",
   "dependencies": {
     "discord.js": "^11.1.0",
-    "ejs": "^2.5.6",
-    "express": "^4.15.3",
     "snekfetch": "^3.5.0"
   }
 }

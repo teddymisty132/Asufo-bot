@@ -7,11 +7,11 @@ var db = new dbapi("Mzc2NTQxNDU2ODA4MTQ4OTkz.DN_5GA.3Bfb1t8dOGWpB8qZ2Q-Z3w9h
 
 const version = '0.1.3'
 
-db.postStats(376541456808148993, client.guilds.size).then((botData) => { console.log(botData) })
 
 client.on("ready", () => {
   console.log("I am ready!");
   client.user.setGame('*help | Version: '+ version)
+  db.postStats(376541456808148993, client.guilds.size).then((botData) => { console.log(botData) })
 });
 
 const prefix = "*"
@@ -76,6 +76,11 @@ client.on("message", (message) => {
       message.reply('You need to join a voice channel first!');
     }
   }
+
+
+});
+
+client.login(process.env.TOKEN);
 
 
 });

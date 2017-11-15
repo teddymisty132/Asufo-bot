@@ -3,14 +3,14 @@
   "name": "Asufo-bot",
   "version": "1.0.0",
   "description": "A very dumb bot",
-  "main": "app.js",
+  "main": "bot.js",
   "engines": {
       "node": "7.8.0",
       "npm": "4.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node bot.js"
   },
   "repository": {
     "type": "git",

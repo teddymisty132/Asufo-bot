@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 
 var dbapi = require("./discordbots.js/index.js");
-var db = new Helper(process.env.BOTTOKEN2)
+var db = new Helper("Mzc2NTQxNDU2ODA4MTQ4OTkz.DN_5GA.3Bfb1t8dOGWpB8qZ2Q-Z3w9hu9c")
 
 const version = '0.1.3'
 

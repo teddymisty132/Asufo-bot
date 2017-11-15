@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 
-var Helper = require(process.enc.DBOTTOKEN); 
+var Helper = require(process.env.DBOTTOKEN); 
 var DiscordBots = new Helper("token")
 
 const version = '0.1.3'

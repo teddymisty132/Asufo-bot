@@ -1,12 +1,4 @@
-// Discord.js bot
-
-const Discord = require('discord.js');
-
-const client = new Discord.Client();
-
-
-
-onst Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const snekfetch = require('snekfetch');
@@ -16,13 +8,7 @@ const version = '0.1.3'
 
 client.on("ready", () => {
   console.log("I am ready!");
-  const snekfetch = require('snekfetch')
-  
-  snekfetch.post(`https://discordbots.org/api/bots/${client.user.id}/stats`)
-    .set('Authorization', proccess.env.BOTTOKEN2)
-    .send({ server_count: client.guilds.size })
-    .then(() => console.log('Updated discordbots.org stats.'))
-    .catch(err => console.error(`Whoops something went wrong: ${err.body}`));
+  bot.user.setGame("test")
 });
 
 const prefix = "*"
@@ -91,4 +77,4 @@ client.on("message", (message) => {
 
 });
 
-client.login(procces.env.TOKEN);
+client.login(procces.env.TOKEN)

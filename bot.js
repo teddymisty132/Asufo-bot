@@ -1,5 +1,10 @@
 const Discord = require("discord.js");
+const Discord = require("discord.js");
 const client = new Discord.Client();
+
+
+var Helper = require(process.enc.DBOTTOKEN); 
+var DiscordBots = new Helper("token")
 
 const version = '0.1.3'
 
@@ -13,6 +18,12 @@ const cmds = "*help, *picme, *uptime, *setusername"
 
 // Disable
 offline = false
+
+DiscordBots.postStats(botID, serverCount).then((botData) => {
+  {
+    "server_count"; client.serverCount.size
+  } 
+})
 
 client.on("message", (message) => {
   if (message.author.bot) return;

@@ -1,4 +1,12 @@
-const Discord = require("discord.js");
+// Discord.js bot
+
+const Discord = require('discord.js');
+
+const client = new Discord.Client();
+
+
+
+onst Discord = require("discord.js");
 const client = new Discord.Client();
 
 const snekfetch = require('snekfetch');
@@ -112,7 +120,6 @@ app.listen(port, () => {
 });
 
 // pings server every 15 minutes to prevent dynos from sleeping
-// pings server every 15 minutes to prevent dynos from sleeping
 setInterval(() => {
-  http.get('https://asufo-bot-discord.herokuapp.com/');
- }, 900000);
+ http.get('https://asufo-bot-discord.herokuapp.com/');
+}, 900000);
